@@ -1,16 +1,13 @@
 class Solution {
 public:
     int numJewelsInStones(string jewels, string stones) {
-        unordered_set<char> map;
-        int counter = 0;
-        for (auto ch : jewels) {
-            map.insert(ch);
-        };
-        for (auto ch : stones) {
-            if (map.find(ch) != map.end()) {
-                counter++;
-            }
-        };
-        return counter;
+       int counter  = 0;
+       for(int i=0; i<jewels.length();i++){
+        for(int j=0;j<stones.length();j++){
+            if(jewels[i]== stones[j]) counter++;
+        }
+       };
+       return counter;
+
     }
 };
