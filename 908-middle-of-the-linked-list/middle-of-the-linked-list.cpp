@@ -13,14 +13,10 @@ public:
     ListNode* middleNode(ListNode* head) {
         ListNode* slow = head;
         ListNode* fast = head;
-        
-        // Move slow pointer one step and fast pointer two steps
-        while (fast != nullptr && fast->next != nullptr) {
+        while(fast !=NULL && fast->next != NULL){
             slow = slow->next;
             fast = fast->next->next;
-        }
-        
-        // Now slow is at the middle node
+        };
         return slow;
-    }
+    };
 };
